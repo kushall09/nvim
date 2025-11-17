@@ -67,16 +67,16 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
+      local lspconfig = vim.lsp.enable
 
       -- Bash: bashls
-      lspconfig.bashls.setup({
+      lspconfig('bashls',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- CSS: cssls
-      lspconfig.cssls.setup({
+      lspconfig('cssls',{
         capabilities = capabilities,
         on_attach = on_attach,
         css = {
@@ -85,19 +85,19 @@ return {
       })
 
       -- HTML: html
-      lspconfig.html.setup({
+      lspconfig('html',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- JSON: jsonls
-      lspconfig.jsonls.setup({
+      lspconfig('jsonls',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- Lua: lua_ls
-      lspconfig.lua_ls.setup({
+      lspconfig('lua_ls',{
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -110,25 +110,25 @@ return {
       })
 
       -- Markdown: marksman
-      lspconfig.marksman.setup({
+      lspconfig('marksman',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- Python: pyright
-      lspconfig.pyright.setup({
+      lspconfig('pyright',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- Rust: rust_analyzer
-      lspconfig.rust_analyzer.setup({
+      lspconfig('rust_analyzer',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
 
       -- TypeScript: tsserver
-      lspconfig.ts_ls.setup({
+      lspconfig('ts_ls',{
         capabilities = capabilities,
         on_attach = on_attach,
       })
